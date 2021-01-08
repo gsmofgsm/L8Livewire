@@ -2,6 +2,9 @@
     <div class="d-flex">
         <input wire:keydown.enter="addTodo" wire:model="title" type="text" name="addTodo" class="" placeholder="What needs to be done?" value="">
 {{--        <button type="submit" wire:click.prevent="addTodo">Add</button>--}}
+        @if ($errors->has('title'))
+            <div style="color: red;">{{ $errors->first('title') }}</div>
+        @endif
     </div>
 
     <ul class="list-group">
