@@ -1,11 +1,8 @@
 <div>
-    <form action="#" method="POST" class="mb-5">
-        @csrf
-        <div class="d-flex">
-            <input wire:model="title" type="text" name="addTodo" class="" placeholder="What needs to be done?" value="">
-            <button type="submit" wire:click.prevent="addTodo">Add</button>
-        </div>
-    </form>
+    <div class="d-flex">
+        <input wire:keydown.enter="addTodo" wire:model="title" type="text" name="addTodo" class="" placeholder="What needs to be done?" value="">
+{{--        <button type="submit" wire:click.prevent="addTodo">Add</button>--}}
+    </div>
 
     <ul class="list-group">
         @foreach($todos as $todo)
