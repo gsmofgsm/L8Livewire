@@ -42,4 +42,11 @@ class Todos extends Component
         $todo->completed = ! $todo->completed;
         $todo->save();
     }
+
+    public function updateTodo($id, $title)
+    {
+        $todo = Todo::find($id);
+        $todo->title = $title;
+        $todo->save();
+    }
 }
