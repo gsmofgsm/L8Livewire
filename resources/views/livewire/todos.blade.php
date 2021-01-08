@@ -14,7 +14,7 @@
                 <span>
                     <input type="checkbox" class="mr-4">
                     <a href="#" class="">{{ $todo->title }}</a>
-                    <button>&times;</button>
+                    <button wire:click="deleteTodo({{ $todo->id }})">&times;</button>
                 </span>
             </div>
             <div>

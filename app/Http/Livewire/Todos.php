@@ -30,4 +30,9 @@ class Todos extends Component
 
         $this->title = '';
     }
+
+    public function deleteTodo($id)
+    {
+        Todo::find($id)->delete();
+    }
 }
