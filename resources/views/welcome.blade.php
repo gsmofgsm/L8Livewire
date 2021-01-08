@@ -12,6 +12,10 @@
 
     <h2>Livewire Example</h2>
     <livewire:counter />
+
+    <h2>Todo's</h2>
+    <livewire:todos />
+
     <livewire:scripts />
     </body>
 </html>

@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'qing@test.nl',
             'count' => 2,
         ]);
+
+        $this->call(TodoSeeder::class);
     }
 }
