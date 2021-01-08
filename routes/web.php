@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+Auth::login(\App\Models\User::first());
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
