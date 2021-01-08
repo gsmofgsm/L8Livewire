@@ -2,14 +2,26 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Todo;
 use Livewire\Component;
 
 class Todos extends Component
 {
+    public $title = '';
+
     public function render()
     {
         return view('livewire.todos', [
             'todos' => auth()->user()->todos
+        ]);
+    }
+
+    public function addTodo()
+    {
+        Todo::create([
+            'user_id' => auth()->id(),
+            'title' => $this->title,
+            'completed' => false
         ]);
     }
 }

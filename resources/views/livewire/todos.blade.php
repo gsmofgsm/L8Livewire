@@ -2,8 +2,8 @@
     <form action="#" method="POST" class="mb-5">
         @csrf
         <div class="d-flex">
-            <input type="text" name="addTodo" class="" placeholder="What needs to be done?" value="">
-            <button type="submit">Add</button>
+            <input wire:model="title" type="text" name="addTodo" class="" placeholder="What needs to be done?" value="">
+            <button type="submit" wire:click.prevent="addTodo">Add</button>
         </div>
     </form>
 
