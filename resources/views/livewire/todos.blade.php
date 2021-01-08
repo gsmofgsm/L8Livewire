@@ -14,7 +14,9 @@
                 <span>
                     <input type="checkbox" class="mr-4">
                     <a href="#" class="">{{ $todo->title }}</a>
-                    <button wire:click="deleteTodo({{ $todo->id }})">&times;</button>
+                    <button
+                        onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
+                        wire:click="deleteTodo({{ $todo->id }})">&times;</button>
                 </span>
             </div>
             <div>
