@@ -12,8 +12,11 @@
         <li class="list-group-item">
             <div>
                 <span>
-                    <input type="checkbox" class="mr-4">
-                    <a href="#" class="">{{ $todo->title }}</a>
+                    <input type="checkbox"
+                           wire:change="toggleTodo({{ $todo->id }})"
+                           {{ $todo->completed ? 'checked' : '' }}
+                           class="mr-4">
+                    <a href="#" class="{{$todo->completed ? 'completed' : ''}}">{{ $todo->title }}</a>
                     <button
                         onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
                         wire:click="deleteTodo({{ $todo->id }})">&times;</button>

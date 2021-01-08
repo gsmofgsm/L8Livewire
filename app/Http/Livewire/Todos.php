@@ -35,4 +35,11 @@ class Todos extends Component
     {
         Todo::find($id)->delete();
     }
+
+    public function toggleTodo($id)
+    {
+        $todo = Todo::find($id);
+        $todo->completed = ! $todo->completed;
+        $todo->save();
+    }
 }

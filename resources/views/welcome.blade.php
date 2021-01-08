@@ -7,6 +7,11 @@
         <title>Laravel</title>
 
         <livewire:styles />
+        <style>
+            .completed {
+                text-decoration: line-through;
+            }
+        </style>
     </head>
     <body class="antialiased">
 
